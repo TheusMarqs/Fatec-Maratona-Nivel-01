@@ -1,19 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int valores[5];
-    int i, pares = 0;
+    int X;
+    int i;
 
-    // Leitura dos valores
-    for (i = 0; i < 5; i++) {
-        scanf("%d", &valores[i]);
-        if (valores[i] % 2 == 0) {
-            pares++;
-        }
+    // Leitura do valor inteiro X
+    scanf("%d", &X);
+
+    // Impressão dos números ímpares de 1 até X
+    for (i = 1; i <= X; i += 2) {
+        printf("%d\n", i);
     }
-
-    // Impressão da quantidade de valores pares
-    printf("%d valores pares\n", pares);
 
     return 0;
 }
