@@ -1,18 +1,17 @@
 #include <stdio.h>
 
-#define PI 3.14159
-
 int main() {
-    double raio, area;
+    int A, B, SOMA;
 
-    // Leitura do valor do raio
-    scanf("%lf", &raio);
+    // Leitura dos valores de A e B
+    scanf("%d", &A);
+    scanf("%d", &B);
 
-    // Cálculo da área
-    area = PI * raio * raio;
+    // Cálculo da soma
+    SOMA = A + B;
 
     // Impressão do resultado
-    printf("A=%.4lf\n", area);
+    printf("SOMA = %d\n", SOMA);
 
     return 0;
 }
