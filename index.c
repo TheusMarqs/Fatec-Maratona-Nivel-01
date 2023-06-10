@@ -1,17 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int A, B, SOMA;
+    int distancia;
+    double combustivel, consumoMedio;
 
-    // Leitura dos valores de A e B
-    scanf("%d", &A);
-    scanf("%d", &B);
+    scanf("%d", &distancia);
+    scanf("%lf", &combustivel);
+   
+    consumoMedio = distancia / combustivel;
 
-    // Cálculo da soma
-    SOMA = A + B;
-
-    // Impressão do resultado
-    printf("SOMA = %d\n", SOMA);
+    printf("%.3lf km/l\n", consumoMedio);
 
     return 0;
 }
