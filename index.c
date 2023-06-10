@@ -7,11 +7,9 @@ int main() {
     // Leitura do valor inteiro N
     scanf("%d", &N);
 
-    // Impressão dos números entre 1 e 10000 com resto igual a 2 ao dividir por N
-    for (i = 1; i <= 10000; i++) {
-        if (i % N == 2) {
-            printf("%d\n", i);
-        }
+    // Impressão da tabuada de N
+    for (i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", i, N, i * N);
     }
 
     return 0;
