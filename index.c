@@ -7,9 +7,19 @@ int main() {
     // Leitura do valor inteiro N
     scanf("%d", &N);
 
-    // Impressão da tabuada de N
-    for (i = 1; i <= 10; i++) {
-        printf("%d x %d = %d\n", i, N, i * N);
+    // Loop para cada caso de teste
+    for (i = 0; i < N; i++) {
+        double valor1, valor2, valor3;
+        double mediaPonderada;
+
+        // Leitura dos valores reais
+        scanf("%lf %lf %lf", &valor1, &valor2, &valor3);
+
+        // Cálculo da média ponderada
+        mediaPonderada = (valor1 * 2 + valor2 * 3 + valor3 * 5) / 10;
+
+        // Impressão da média ponderada
+        printf("%.1lf\n", mediaPonderada);
     }
 
     return 0;
