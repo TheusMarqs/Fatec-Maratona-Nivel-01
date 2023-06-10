@@ -7,9 +7,11 @@ int main() {
     // Leitura do valor inteiro N
     scanf("%d", &N);
 
-    // Impressão do quadrado dos valores pares de 1 até N
-    for (i = 2; i <= N; i += 2) {
-        printf("%d^2 = %lld\n", i, (long long)i * i);
+    // Impressão dos números entre 1 e 10000 com resto igual a 2 ao dividir por N
+    for (i = 1; i <= 10000; i++) {
+        if (i % N == 2) {
+            printf("%d\n", i);
+        }
     }
 
     return 0;
