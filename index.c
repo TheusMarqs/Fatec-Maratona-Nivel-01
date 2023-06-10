@@ -1,29 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int X, Y;
+    int N;
     int i;
-    int soma = 0;
 
-    // Leitura dos valores inteiros X e Y
-    scanf("%d %d", &X, &Y);
+    // Leitura do valor inteiro N
+    scanf("%d", &N);
 
-    // Verifica se X é maior que Y e inverte os valores se necessário
-    if (X > Y) {
-        int temp = X;
-        X = Y;
-        Y = temp;
+    // Impressão do quadrado dos valores pares de 1 até N
+    for (i = 2; i <= N; i += 2) {
+        printf("%d^2 = %lld\n", i, (long long)i * i);
     }
-
-    // Soma dos números ímpares entre X e Y
-    for (i = X + 1; i < Y; i++) {
-        if (i % 2 != 0) {
-            soma += i;
-        }
-    }
-
-    // Impressão da soma dos números ímpares
-    printf("%d\n", soma);
 
     return 0;
 }
