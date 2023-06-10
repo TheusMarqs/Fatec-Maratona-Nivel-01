@@ -1,38 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int codigo, quantidade;
-    double valor;
+    double x, y;
 
-    // Leitura do código e da quantidade
-    scanf("%d %d", &codigo, &quantidade);
+    // Leitura das coordenadas
+    scanf("%lf %lf", &x, &y);
 
-    // Cálculo do valor da conta a pagar
-    switch (codigo) {
-        case 1:
-            valor = 4.00;
-            break;
-        case 2:
-            valor = 4.50;
-            break;
-        case 3:
-            valor = 5.00;
-            break;
-        case 4:
-            valor = 2.00;
-            break;
-        case 5:
-            valor = 1.50;
-            break;
-        default:
-            valor = 0.00;
-            break;
+    if (x == 0.0 && y == 0.0) {
+        printf("Origem\n");
+    } else if (x == 0.0) {
+        printf("Eixo Y\n");
+    } else if (y == 0.0) {
+        printf("Eixo X\n");
+    } else if (x > 0.0 && y > 0.0) {
+        printf("Q1\n");
+    } else if (x < 0.0 && y > 0.0) {
+        printf("Q2\n");
+    } else if (x < 0.0 && y < 0.0) {
+        printf("Q3\n");
+    } else {
+        printf("Q4\n");
     }
-
-    double total = valor * quantidade;
-
-    // Impressão do resultado
-    printf("Total: R$ %.2lf\n", total);
 
     return 0;
 }
