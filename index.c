@@ -1,24 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    double valores[6];
-    int i, positivos = 0;
-    double soma = 0.0;
+    int valores[5];
+    int i, pares = 0;
 
     // Leitura dos valores
-    for (i = 0; i < 6; i++) {
-        scanf("%lf", &valores[i]);
-        if (valores[i] > 0) {
-            positivos++;
-            soma += valores[i];
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &valores[i]);
+        if (valores[i] % 2 == 0) {
+            pares++;
         }
     }
 
-    // Impressão da quantidade de valores positivos
-    printf("%d valores positivos\n", positivos);
-
-    // Cálculo e impressão da média dos valores positivos
-    printf("%.1lf\n", soma / positivos);
+    // Impressão da quantidade de valores pares
+    printf("%d valores pares\n", pares);
 
     return 0;
 }
