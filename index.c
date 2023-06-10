@@ -1,16 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    int X;
+    int X, Y;
     int i;
+    int soma = 0;
 
-    // Leitura do valor inteiro X
-    scanf("%d", &X);
+    // Leitura dos valores inteiros X e Y
+    scanf("%d %d", &X, &Y);
 
-    // Impressão dos números ímpares de 1 até X
-    for (i = 1; i <= X; i += 2) {
-        printf("%d\n", i);
+    // Verifica se X é maior que Y e inverte os valores se necessário
+    if (X > Y) {
+        int temp = X;
+        X = Y;
+        Y = temp;
     }
+
+    // Soma dos números ímpares entre X e Y
+    for (i = X + 1; i < Y; i++) {
+        if (i % 2 != 0) {
+            soma += i;
+        }
+    }
+
+    // Impressão da soma dos números ímpares
+    printf("%d\n", soma);
 
     return 0;
 }
